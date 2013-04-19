@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<title>Orbital motion simulator</title>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style/style.css">
+	<script src="js/orbit.js"></script>
+	<script src="js/colour.picker.js"></script>
+	<script src="js/stats.js"></script>
+	<script src="js/init.js"></script>
+</head>
+<body>
+
+	<canvas id="system" width="500" height="500"></canvas>
+	<canvas id="overlay" width="500" height="500"></canvas>
+
+	<div id="controls">
+		<ul>
+			<li>
+				<a href="#" class="play_pause" title="Play/Pause"><img src="img/pause.png" alt="Pause"></a>
+			</li>
+			<li>
+				<a href="#" class="draw" title="Drawing mode"><img src="img/pencil.png" alt="Draw"></a>
+			</li>
+			<li>
+				<a href="#" class="clear" title="Clear traces"><img src="img/rubber.png" alt="Clear"></a>
+			</li>
+			<li>
+				<a href="#" class="clear_particles" title="Remove all particles"><img src="img/refresh.png" alt="Refresh"></a>
+			</li>
+			<li>
+				<a href="#" class="toggle_extras active" title="Show extras"><img src="img/eye.png" alt="Extras"></a>
+			</li>
+			<li>
+				<a href="#" class="add_attractor" title="Add attractor"><img src="img/plus.png" alt="Plus"></a>
+			</li>
+			<li>
+				<a href="#" class="view_stats" title="View stats"><img src="img/gauge.png" alt="Stats"></a>
+			</li>
+			<li>
+				<a href="#" class="save" title="Save"><img src="img/save.png" alt="Save"></a>
+			</li>
+			<li>
+				<a href="#" class="colour_picker" title="Colour picker"><img src="img/wheel.png" alt="Colour"></a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="colour_picker">
+		<canvas id="colour" width="200" height="200"></canvas>
+		<canvas id="spectrum" width="30" height="200"></canvas>
+	</div>
+
+	<div id="stats">
+		<dl>
+			<dt>FPS:&nbsp;</dt>
+			<dd class="stats_fps"></dd>
+			<dt>Delta:&nbsp;</dt>
+			<dd class="stats_time"></dd>
+			<dt>Particles:&nbsp;</dt>
+			<dd class="stats_particles"></dd>
+			<dt>Attractors:&nbsp;</dt>
+			<dd class="stats_attractors"></dd>
+		</dl>
+	</div>
+
+</body>
+</html>
