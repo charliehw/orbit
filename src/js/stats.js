@@ -1,3 +1,7 @@
+/*
+	Animation statistcs
+	Author: charliehw
+*/
 var ORBIT = ORBIT || {};
 
 ORBIT.Stats = function (system) {
@@ -10,7 +14,7 @@ ORBIT.Stats = function (system) {
 	return {
 
 		update: function () {
-				
+
 			time = newTime;
 			newTime = Date.now();
 			diff = newTime - time;

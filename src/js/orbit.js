@@ -1,3 +1,7 @@
+/*
+	Orbital motion simlator
+	Author: charliehw
+*/
 'use strict';
 var ORBIT = ORBIT || {};
 
@@ -64,7 +68,7 @@ ORBIT.ParticleSystem.prototype = {
 		ORBIT.utils.requestAnimationFrame.call(window, function () {
 			that.animate.call(that);
 		});
-		
+
 	},
 
 	draw: function () {
@@ -188,7 +192,7 @@ ORBIT.ParticleSystem.Particle.prototype = {
 				continue;
 			}
 			vector = {
-				x: (this.displacement.x - this.system.attractors[i].displacement.x) || 1, 
+				x: (this.displacement.x - this.system.attractors[i].displacement.x) || 1,
 				y: (this.displacement.y - this.system.attractors[i].displacement.y) || 1
 			};
 
@@ -300,7 +304,7 @@ ORBIT.ParticleSystem.UserInterface = function (system) {
 			});
 			upId = ORBIT.utils.Handler.bind(that.system.overlayCanvas, 'mouseup touchend', function (e) {
 				ORBIT.utils.Handler.unbind(upId, moveId);
-			});	
+			});
 		} else {
 			that.placeholderPoints.push(p);
 			moveId = ORBIT.utils.Handler.bind(that.system.overlayCanvas, 'mousemove touchmove', function (e) {
@@ -359,8 +363,8 @@ ORBIT.ParticleSystem.UserInterface.prototype = {
 			attractor = this.system.attractors[i];
 			if (attractor.staticAttractor) {
 				// Equation for circle: (x-a)^2 + (y-b)^2 = r^2
-				if (Math.pow((p.x - attractor.displacement.x), 2) + 
-					Math.pow((p.y - attractor.displacement.y), 2) < 
+				if (Math.pow((p.x - attractor.displacement.x), 2) +
+					Math.pow((p.y - attractor.displacement.y), 2) <
 					Math.pow(this.system.opts.attractorRadius, 2)) {
 					return attractor;
 				}
@@ -372,7 +376,7 @@ ORBIT.ParticleSystem.UserInterface.prototype = {
 	getVelocity: function () {
 		// Calculate velocity of the drag
 		// Only using the last 2 points in the drag - could be improved
-		if (this.placeholderPoints.length > 1) { 
+		if (this.placeholderPoints.length > 1) {
 			var length = this.placeholderPoints.length,
 				velocityX = this.placeholderPoints[length-1].x - this.placeholderPoints[length-2].x,
 				velocityY = this.placeholderPoints[length-1].y - this.placeholderPoints[length-2].y,

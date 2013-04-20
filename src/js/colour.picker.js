@@ -1,3 +1,7 @@
+/*
+	Canvas colour pick
+	Author: charliehw
+*/
 'use strict';
 var ORBIT = ORBIT || {};
 
