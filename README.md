@@ -3,7 +3,7 @@ Orbital Motion Simulator
 
 A canvas experiment modelling orbital motion.
 
-[Demo](http://charliehw.com/projects/orbit)
+[Demo](http://www.charliehw.com/projects/orbit)
 
 Features
 --------
